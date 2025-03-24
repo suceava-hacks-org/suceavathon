@@ -5,6 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Hackovina",
   description: "Hackovina is an entry-level hackathon for high school students.",
+  icons: ["https://assets.hackclub.com/icon-rounded.svg"]
 };
 
 export default function RootLayout({

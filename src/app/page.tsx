@@ -13,12 +13,12 @@ const navItems = [
 ];
 
 const sponsors = [
-  { name: "TBD", logo: "/", tier: "platinum" },
-  { name: "TBD", logo: "/", tier: "gold" },
-  { name: "TBD", logo: "/", tier: "gold" },
-  { name: "TBD", logo: "/", tier: "silver" },
-  { name: "TBD", logo: "/", tier: "silver" },
-  { name: "TBD", logo: "/", tier: "bronze" },
+  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "platinum" },
+  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "gold" },
+  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "gold" },
+  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "silver" },
+  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "silver" },
+  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "bronze" },
 ];
 
 
@@ -92,7 +92,7 @@ const scheduleItems = [
   {
     time: "18:00",
     event: "Snack Break",
-    details: "Gustări și energizante pentru sprint-ul final"
+    details: "Gustări și băuturi pentru a-ți reîncărca bateriile"
   },
   {
     time: "21:30",
@@ -214,15 +214,23 @@ export default function Home(): React.ReactElement {
     <div className="bg-gradient-to-b from-white to-[#fff5f5] min-h-screen">
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-gradient-to-b from-[#ec3750] to-[#9c162a] z-50 flex flex-col items-center justify-center p-6"
-          onClick={toggleMenu}
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#ec3750] to-[#9c162a]"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              toggleMenu();
+            }
+          }}
         >
           <div className="absolute top-0 left-4">
-            <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Orpheus" className="h-10" />
+            <img
+              src="https://assets.hackclub.com/flag-orpheus-top.svg"
+              alt="Hack Club Orpheus"
+              className="h-10"
+            />
           </div>
 
           <button
-            className="absolute top-4 right-4 text-white"
+            className="absolute top-4 right-4 text-white hover:text-yellow-300 transition-colors"
             onClick={toggleMenu}
             aria-label="Close menu"
           >
@@ -230,29 +238,30 @@ export default function Home(): React.ReactElement {
           </button>
 
           <nav className="w-full max-w-md">
-            <ul className="flex flex-col gap-8 items-center">
+            <ul className="flex flex-col items-center gap-6">
               {navItems.map((item, index) => (
                 <li key={index} className="w-full">
                   <a
                     href={item.href}
-                    className="text-white text-2xl font-bold hover:text-yellow-300 transition-colors block text-center py-3"
+                    className="block py-3 text-2xl font-bold text-center text-white transition-colors hover:text-yellow-300"
                     onClick={toggleMenu}
                   >
                     {item.label}
                   </a>
                 </li>
               ))}
-              <li className="mt-8 w-full">
-                <Button
-                  className="bg-white hover:bg-gray-100 text-[#ec3750] rounded-full px-8 py-6 text-lg font-bold w-full shadow-lg hover:shadow-xl transition-all"
+              <li className="w-full mt-8">
+                <button
+                  className="w-full px-8 py-4 text-lg font-bold text-[#ec3750] transition-all bg-white rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl"
                   onClick={toggleMenu}
                 >
                   Register Now
-                </Button>
+                </button>
               </li>
             </ul>
           </nav>
-          <div className="absolute bottom-10 text-white/80 text-sm">
+
+          <div className="absolute bottom-6 text-sm text-white/80">
             Hackovina • 2025
           </div>
         </div>
@@ -315,7 +324,7 @@ export default function Home(): React.ReactElement {
               </div>
 
               <h2 className="text-xl sm:text-2xl md:text-4xl text-gray-700 font-medium mb-10 max-w-3xl">
-                Un hackathon de 12 ore în care  <span className="underline decoration-[#ec3750] decoration-wavy decoration-2 underline-offset-4">ideile prind viata.</span>
+                Un hackathon de 12 ore în care ideile prind viață.
               </h2>
 
               <div className="w-full max-w-2xl mb-12">
@@ -347,7 +356,9 @@ export default function Home(): React.ReactElement {
                   Alătură-te acum!
                 </Button>
                 <Button className="bg-black hover:bg-gray-800 text-white rounded-full px-10 py-6 text-lg font-bold shadow-md hover:shadow-lg transition-all">
-                  Află mai multe
+                  <a href="#about" className="flex items-center gap-2">
+                    Află mai multe
+                  </a>
                 </Button>
               </div>
 
@@ -365,7 +376,7 @@ export default function Home(): React.ReactElement {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce este Hackovina?</h2>
               <div className="max-w-3xl mx-auto">
                 <p className="text-lg text-gray-700 mb-6">
-                  Hackovina este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colaborare. Fie că ești începător sau ai experiență în programare, vei găsi o comunitate primitoare, gata să te susțină să reușești.
+                  Hackovina este un eveniment de coding de 12 ore în care participanții se adună pentru a transforma ideile în realitate prin cod, creativitate și colaborare. Fie că ești începător sau ai experiență în programare, vei găsi o comunitate primitoare, gata să te susțină să reușești.
                 </p>
                 <div className="bg-gradient-to-r from-[#ec3750] to-black text-white font-bold px-6 py-3 rounded-lg mb-8 transform rotate-[-1deg] shadow-md inline-block">
                   <span className="text-lg">✨ Creat special pentru începători și first-time hackers! ✨</span>
@@ -427,13 +438,13 @@ export default function Home(): React.ReactElement {
                 💻 Programați împreună
               </div>
               <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[1deg] text-lg">
-                🍕 Pizza nelimitat
+                🍿 Snacks
               </div>
               <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[-1deg] text-lg">
                 👕 Ia-ți tricoul Hackovina
               </div>
               <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[1deg] text-lg">
-                🎁 Premii uimitoare
+                🎁 Premii pe măsură
               </div>
             </div>
           </div>
@@ -488,10 +499,13 @@ export default function Home(): React.ReactElement {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h4 className="font-bold text-xl mb-2">Armeneasca Tower</h4>
+                    <h4 className="font-bold text-xl mb-2">
+                      Asta ar putea fi locația ta
+                    </h4>
                     <p className="text-gray-600 mb-4">
-                      Etajul 6<br />
-                      Str. Armeneasca nr 1, Suceava
+                      TBD<br />
+                      Asta ar putea fi adresa ta<br />
+                      Suceava, Romania
                     </p>
                     <a
                       href="https://maps.app.goo.gl/4VV1KWRCz1afSZKz7"
@@ -512,8 +526,7 @@ export default function Home(): React.ReactElement {
                 <div className="bg-[#ec375010] p-6 rounded-xl">
                   <h4 className="font-bold text-lg mb-2">Transport</h4>
                   <p className="text-gray-700 mb-4">
-                    Armeneasca Tower este situată în centrul orașului Suceava, la câteva minute de mers pe jos de principalele mijloace de transport în comun.
-                    Liniile: 1, 2, 3, 4, 5, 6, 9, 15, 17, 21, 22, 23, 26, 28, 29, 30
+                    TBD
                   </p>
                   <h4 className="font-bold text-lg mb-2">Îndrumare</h4>
                   <p className="text-gray-700">
@@ -715,20 +728,17 @@ export default function Home(): React.ReactElement {
                   </p>
                   <p className="flex items-center gap-3 text-gray-600">
                     <Mail className="text-red-500" />
-                    <span>hello@suceavahacks.org</span>
+                    <span>hello@hackovina.org</span>
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <a href="#" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                  <a href="https://www.instagram.com/hackovina/" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
                     <Instagram className="h-6 w-6" />
                   </a>
-                  <a href="#" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
-                    <Twitter className="h-6 w-6" />
-                  </a>
-                  <a href="#" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                  <a href="https://github.com/hackovina" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a href="#" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                  <a className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors" href="mailto:hello@hackovina.org">
                     <Mail className="h-6 w-6" />
                   </a>
                 </div>
@@ -784,16 +794,21 @@ export default function Home(): React.ReactElement {
                 <h3 className="text-2xl font-bold">Hackovina</h3>
               </div>
               <p className="text-white/80 mb-6 text-lg">
-                Hackovina este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colabor
+                Hackovina este sponsorizat fiscal de The Hack Foundation (d.b.a. Hack Club), o organizație nonprofit 501(c)(3) (EIN: 81-2908499).
+              </p>
+              <p className="text-white/80 mb-6 text-lg">
+                  Toate donațiile sunt deductibile fiscal în măsura permisă de lege. 
+                  Transparența financiară este importantă pentru noi - poți vedea toate cheltuielile și veniturile noastre pe {""}
+                  <a href="https://hcb.hackclub.com/hackovina/" className="text-white underline hover:text-yellow-300 transition-colors"> pagina noastră unde găsești toate detaliile financiare</a>.
               </p>
               <div className="flex gap-6">
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  <Twitter className="h-6 w-6" />
+                <a className="text-white hover:text-yellow-300 transition-colors" href="mailto:hello@hackovina.org">
+                  <Mail className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
+                <a href="https://github.com/hackovina" className="text-white hover:text-yellow-300 transition-colors">
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
+                <a href="https://www.instagram.com/hackovina/" className="text-white hover:text-yellow-300 transition-colors">
                   <Instagram className="h-6 w-6" />
                 </a>
               </div>
@@ -820,7 +835,7 @@ export default function Home(): React.ReactElement {
             <div>
               <h4 className="text-xl font-bold mb-6"> Newsletter</h4>
               <p className="text-white/80 mb-4">
-                Abonează-te la newsletter-ul nostru pentru a fi la curent cu cele mai noi informații despre Suceava Hacks
+                Abonează-te la newsletter-ul nostru pentru a fi la curent cu cele mai noi informații despre Hackovina
               </p>
               <form className="flex">
                 <input
