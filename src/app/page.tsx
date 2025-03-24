@@ -508,7 +508,7 @@ export default function Home(): React.ReactElement {
                       Suceava, Romania
                     </p>
                     <a
-                      href="https://maps.app.goo.gl/4VV1KWRCz1afSZKz7"
+                      href="https://maps.app.goo.gl/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-[#ec3750] font-medium hover:underline"
