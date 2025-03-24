@@ -1,0 +1,299 @@
+{
+  "navigation": {
+    "despre": "Despre",
+    "program": "Program",
+    "faq": "FAQ",
+    "premii": "Premii",
+    "contact": "Contact"
+  },
+  "mobileMenu": {
+    "registerButton": "Register Now",
+    "footerText": "Suceavathon • 2025"
+  },
+  "loadingScreen": {
+    "loading": "Încărcare...",
+    "subtext": "Pregătim ceva special pentru tine!"
+  },
+  "hero": {
+    "eventBadge": "HACKATON 12 ORE • 26 APRILIE, 2025",
+    "logoAlt": "Suceavathon Logo",
+    "headline": "Un hackathon de 12 ore în care ideile prind viata.",
+    "countdownTitle": "Hackathonul începe în...",
+    "timeUnits": {
+      "days": "Zile",
+      "hours": "Ore",
+      "minutes": "Minute",
+      "seconds": "Secunde"
+    },
+    "buttons": {
+      "join": "Alătură-te acum!",
+      "learnMore": "Află mai multe"
+    }
+  },
+  "about": {
+    "badge": "DESPRE",
+    "title": "Ce este Suceavathon?",
+    "description": "Suceavathon este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colaborare. Fie că ești începător sau ai experiență în programare, vei găsi o comunitate primitoare, gata să te susțină să reușești.",
+    "highlight": "✨ Creat special pentru începători și first-time hackers! ✨"
+  },
+  "features": [
+    {
+      "icon": "Clock",
+      "title": "12 ore",
+      "description": "de programare"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Spațiu modern",
+      "description": "vibe-uri creative"
+    },
+    {
+      "icon": "Calendar",
+      "title": "26 Aprilie",
+      "description": "2025"
+    },
+    {
+      "icon": "Trophy",
+      "title": "Premii",
+      "description": "& swag"
+    }
+  ],
+  "infoBoxes": [
+    {
+      "icon": "Users",
+      "title": "Newbie-friendly",
+      "description": "N-ai mai scris cod niciodată? Nicio problemă! Vom avea mentori la fața locului care te vor ajuta să începi, plus workshopuri special gândite pentru începători."
+    },
+    {
+      "icon": "Code",
+      "title": "Învață făcând",
+      "description": "Construiește-ți primul proiect hands-on, într-un mediu fun & friendly. Zero stres, 100% explorare!"
+    },
+    {
+      "icon": "Star",
+      "title": "Fă ceva extraordinar",
+      "description": "Formează o echipă, alege un proiect și ai 12 ore la dispoziție să-l construiești. Vei fi uimit de cât de mult poți realiza într-o singură zi!"
+    }
+  ],
+  "benefits": [
+    {
+      "text": "💻 Programați împreună"
+    },
+    {
+      "text": "🍕 Pizza nelimitat"
+    },
+    {
+      "text": "👕 Ia-ți tricoul Suceavathon"
+    },
+    {
+      "text": "🎁 Premii uimitoare"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Evenimentul are loc fizic?",
+      "answer": "Da! Suceavathon este un eveniment cu prezență fizică, care se desfășoară într-o locație din Suceava."
+    },
+    {
+      "question": "Participarea este gratuită?",
+      "answer": "Da, participarea este complet gratuită! Asigurăm mâncare, băuturi, materiale și multe altele."
+    },
+    {
+      "question": "Pot participa dacă nu am o echipă?",
+      "answer": "Desigur! Poți veni singur și vei putea forma o echipă la fața locului, în cadrul sesiunii de team matching."
+    },
+    {
+      "question": "Câte persoane pot fi într-o echipă?",
+      "answer": "Echipele pot avea între 1 și 5 membri, dar recomandăm cu tărie formarea unei echipe prin team matching pentru o experiență mai colaborativă și distractivă!"
+    },
+    {
+      "question": "Vor exista premii?",
+      "answer": "Da! Cele mai bune proiecte vor fi premiate de către juriu. Avem și premii speciale și surprize pentru participanți."
+    },
+    {
+      "question": "Pot participa dacă sunt începător în programare?",
+      "answer": "Absolut! Evenimentul este gândit pentru toate nivelurile de experiență. Vom avea mentori și workshopuri pentru începători."
+    },
+    {
+      "question": "Unde trebuie să vin și la ce oră?",
+      "answer": "Veți primi toate detaliile pe email înainte de eveniment, inclusiv pe Slack, Discord, Whatsapp și alte canale de comunicare. Locația și ora exactă vor fi comunicate clar participanților."
+    },
+    {
+      "question": "Pot participa dacă nu sunt elev de liceu?",
+      "answer": "Da, pot participa și elevii de gimnaziu! Totuși, nu acceptăm absolvenți de liceu sau studenți. Dacă vrei totuși să iei parte la eveniment, contactează-ne pentru a te alătura ca voluntar!"
+    }
+  ],
+  "schedule": [
+    {
+      "time": "09:00",
+      "event": "Înregistrare & Welcome Coffee",
+      "details": "Sosire participanți, înregistrare și networking"
+    },
+    {
+      "time": "10:00",
+      "event": "Deschidere Oficială",
+      "details": "Prezentarea regulilor și formarea echipelor"
+    },
+    {
+      "time": "10:30",
+      "event": "Start Hackathon",
+      "details": "Începe cronometrul! Timp de 12 ore pentru a crea proiectul"
+    },
+    {
+      "time": "11:30",
+      "event": "Workshop pentru Începători",
+      "details": "Un atelier interactiv pentru cei care vor să învețe bazele"
+    },
+    {
+      "time": "13:00",
+      "event": "Prânz",
+      "details": "Pauză de masă și networking"
+    },
+    {
+      "time": "14:00",
+      "event": "CTF Challenge",
+      "details": "Provocare de tip Capture The Flag pentru toți pasionații de securitate"
+    },
+    {
+      "time": "18:00",
+      "event": "Snack Break",
+      "details": "Gustări și energizante pentru sprint-ul final"
+    },
+    {
+      "time": "21:30",
+      "event": "Deadline pentru Înscriere Proiecte",
+      "details": "Ultimele modificări și pregătirea prezentării"
+    },
+    {
+      "time": "22:00",
+      "event": "Prezentări Proiecte",
+      "details": "Fiecare echipă își prezintă proiectul în fața juriului"
+    },
+    {
+      "time": "23:00",
+      "event": "Deliberare & Premiere",
+      "details": "Anunțarea câștigătorilor și înmânarea premiilor"
+    },
+    {
+      "time": "23:30",
+      "event": "Închidere Oficială",
+      "details": "Networking și discuții finale"
+    }
+  ],
+  "location": {
+    "sectionTitle": "Locația",
+    "mapPlaceholder": "Map goes here",
+    "venue": "Armeneasca Tower",
+    "address": "Etajul 6\nStr. Armeneasca nr 1, Suceava",
+    "googleMaps": "Deschide în Google Maps",
+    "transport": {
+      "title": "Transport",
+      "description": "Armeneasca Tower este situată în centrul orașului Suceava, la câteva minute de mers pe jos de principalele mijloace de transport în comun. Liniile: 1, 2, 3, 4, 5, 6, 9, 15, 17, 21, 22, 23, 26, 28, 29, 30",
+      "guidance": "Îndrumare",
+      "guidanceDescription": "Putem îndruma participanții de la gară sau alte puncte de sosire către locația evenimentului, dacă este nevoie."
+    }
+  },
+  "prizes": {
+    "badge": "PREMII",
+    "title": "Premii Atractive",
+    "description": "Câștigătorii Suceavathon vor fi recompensați cu premii valoroase și oportunități incredibile!",
+    "cards": [
+      {
+        "badge": "Locul 1",
+        "title": "Marele Premiu",
+        "description": "TBD",
+        "details": "Detaliile premiului vor fi anunțate în curând"
+      },
+      {
+        "badge": "Locul 2",
+        "title": "Premiul 2",
+        "description": "TBD",
+        "details": "Detaliile premiului vor fi anunțate în curând"
+      },
+      {
+        "badge": "Locul 3",
+        "title": "Premiul 3",
+        "description": "TBD",
+        "details": "Detaliile premiului vor fi anunțate în curând"
+      }
+    ],
+    "specialPrizes": {
+      "title": "Premii Speciale",
+      "description": "Pe lângă premiile principale, oferim și premii speciale (TBD) pentru:"
+    }
+  },
+  "sponsors": {
+    "badge": "SPONSORI",
+    "title": "Sponsori & Parteneri",
+    "description": "Suceavathon nu ar fi posibil fără sprijinul partenerilor și sponsorilor noștri. Mulțumim pentru susținere!",
+    "platinum": {
+      "title": "SPONSORI PLATINUM"
+    },
+    "gold": {
+      "title": "SPONSORI GOLD"
+    },
+    "silverBronze": {
+      "title": "SPONSORI SILVER & BRONZE"
+    },
+    "callToAction": "Interesat să devii sponsor?",
+    "contactLink": "Contactează-ne pentru detalii"
+  },
+  "contact": {
+    "badge": "CONTACT",
+    "title": "Contactează-ne",
+    "description": "Ai întrebări sau vrei să afli mai multe despre Suceavathon? Trimite-ne un mesaj și te vom contacta cât mai curând posibil.",
+    "contactInfo": {
+      "title": "Informații de contact",
+      "location": "Suceava, Romania",
+      "email": "hello@suceavahacks.org"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "github": "Github",
+      "mail": "Mail"
+    },
+    "form": {
+      "title": "Trimite-ne un mesaj",
+      "fields": {
+        "name": {
+          "label": "Nume",
+          "placeholder": "Numele tău"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "message": {
+          "label": "Mesaj",
+          "placeholder": "Cum te putem ajuta?"
+        }
+      },
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "branding": {
+      "title": "Suceavathon",
+      "description": "Suceavathon este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colabor"
+    },
+    "quickLinks": {
+      "title": "Link-uri rapide",
+      "links": [
+        "Despre",
+        "Program",
+        "FAQ",
+        "Premii",
+        "Contact",
+        "Inregistrare"
+      ]
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Abonează-te la newsletter-ul nostru pentru a fi la curent cu cele mai noi informații despre Suceava Hacks",
+      "placeholder": "Adresa ta de email",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "Toate drepturile rezervate."
+  }
+}

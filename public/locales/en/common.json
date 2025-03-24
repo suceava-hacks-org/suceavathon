@@ -1,0 +1,299 @@
+{
+  "navigation": {
+    "despre": "About",
+    "program": "Schedule",
+    "faq": "FAQ",
+    "premii": "Prizes",
+    "contact": "Contact"
+  },
+  "mobileMenu": {
+    "registerButton": "Register Now",
+    "footerText": "Suceavathon • 2025"
+  },
+  "loadingScreen": {
+    "loading": "Loading...",
+    "subtext": "We’re preparing something special for you!"
+  },
+  "hero": {
+    "eventBadge": "12-HOUR HACKATHON • APRIL 26, 2025",
+    "logoAlt": "Suceavathon Logo",
+    "headline": "A 12-hour hackathon where ideas come to life.",
+    "countdownTitle": "Hackathon starts in...",
+    "timeUnits": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "buttons": {
+      "join": "Join now!",
+      "learnMore": "Learn more"
+    }
+  },
+  "about": {
+    "badge": "ABOUT",
+    "title": "What is Suceavathon?",
+    "description": "Suceavathon is a 12-hour coding event where participants come together to turn ideas into reality through code, creativity, and collaboration. Whether you're a beginner or experienced in programming, you'll find a welcoming community ready to support you.",
+    "highlight": "✨ Created especially for beginners and first-time hackers! ✨"
+  },
+  "features": [
+    {
+      "icon": "Clock",
+      "title": "12 hours",
+      "description": "of coding"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Modern space",
+      "description": "creative vibes"
+    },
+    {
+      "icon": "Calendar",
+      "title": "April 26",
+      "description": "2025"
+    },
+    {
+      "icon": "Trophy",
+      "title": "Prizes",
+      "description": "& swag"
+    }
+  ],
+  "infoBoxes": [
+    {
+      "icon": "Users",
+      "title": "Newbie-friendly",
+      "description": "Never written code before? No worries! We’ll have on-site mentors to help you get started, plus workshops designed specifically for beginners."
+    },
+    {
+      "icon": "Code",
+      "title": "Learn by doing",
+      "description": "Build your first hands-on project in a fun & friendly environment. Zero stress, 100% exploration!"
+    },
+    {
+      "icon": "Star",
+      "title": "Do something extraordinary",
+      "description": "Form a team, choose a project, and you have 12 hours to build it. You’ll be amazed at what you can accomplish in one day!"
+    }
+  ],
+  "benefits": [
+    {
+      "text": "💻 Code together"
+    },
+    {
+      "text": "🍕 Unlimited pizza"
+    },
+    {
+      "text": "👕 Get your Suceavathon t-shirt"
+    },
+    {
+      "text": "🎁 Amazing prizes"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the event physical?",
+      "answer": "Yes! Suceavathon is a physical event taking place at a location in Suceava."
+    },
+    {
+      "question": "Is participation free?",
+      "answer": "Yes, participation is completely free! We provide food, drinks, materials, and much more."
+    },
+    {
+      "question": "Can I participate if I don't have a team?",
+      "answer": "Absolutely! You can come solo and form a team on-site during our team matching session."
+    },
+    {
+      "question": "How many people can be in a team?",
+      "answer": "Teams can have between 1 and 5 members, but we highly recommend forming a team via team matching for a more collaborative and fun experience!"
+    },
+    {
+      "question": "Will there be prizes?",
+      "answer": "Yes! The best projects will be awarded by a jury. We also have special prizes and surprises for participants."
+    },
+    {
+      "question": "Can I participate if I’m a programming beginner?",
+      "answer": "Absolutely! The event is designed for all skill levels. We’ll have mentors and beginner-friendly workshops."
+    },
+    {
+      "question": "Where should I go and what time?",
+      "answer": "You’ll receive all details via email before the event—including on Slack, Discord, WhatsApp, and other channels. The exact location and time will be clearly communicated."
+    },
+    {
+      "question": "Can I participate if I’m not a high school student?",
+      "answer": "Yes, middle school students can participate! However, we do not accept high school graduates or college students. If you still want to be part of the event, contact us about volunteering."
+    }
+  ],
+  "schedule": [
+    {
+      "time": "09:00",
+      "event": "Registration & Welcome Coffee",
+      "details": "Participant arrival, registration, and networking"
+    },
+    {
+      "time": "10:00",
+      "event": "Official Opening",
+      "details": "Presentation of rules and team formation"
+    },
+    {
+      "time": "10:30",
+      "event": "Hackathon Starts",
+      "details": "The clock starts! You have 12 hours to build your project"
+    },
+    {
+      "time": "11:30",
+      "event": "Beginner Workshop",
+      "details": "An interactive workshop for those who want to learn the basics"
+    },
+    {
+      "time": "13:00",
+      "event": "Lunch",
+      "details": "Meal break and networking"
+    },
+    {
+      "time": "14:00",
+      "event": "CTF Challenge",
+      "details": "Capture The Flag challenge for all security enthusiasts"
+    },
+    {
+      "time": "18:00",
+      "event": "Snack Break",
+      "details": "Snacks and energizers for the final sprint"
+    },
+    {
+      "time": "21:30",
+      "event": "Project Submission Deadline",
+      "details": "Final tweaks and presentation preparation"
+    },
+    {
+      "time": "22:00",
+      "event": "Project Presentations",
+      "details": "Each team presents their project to the jury"
+    },
+    {
+      "time": "23:00",
+      "event": "Deliberation & Awards",
+      "details": "Winners announced and prizes awarded"
+    },
+    {
+      "time": "23:30",
+      "event": "Official Closing",
+      "details": "Networking and final discussions"
+    }
+  ],
+  "location": {
+    "sectionTitle": "Location",
+    "mapPlaceholder": "Map goes here",
+    "venue": "Armeneasca Tower",
+    "address": "6th Floor\nArmeneasca St. no. 1, Suceava",
+    "googleMaps": "Open in Google Maps",
+    "transport": {
+      "title": "Transport",
+      "description": "Armeneasca Tower is located in the center of Suceava, just a few minutes’ walk from the main public transport. Lines: 1, 2, 3, 4, 5, 6, 9, 15, 17, 21, 22, 23, 26, 28, 29, 30",
+      "guidance": "Guidance",
+      "guidanceDescription": "We can guide participants from the station or other arrival points to the event location if needed."
+    }
+  },
+  "prizes": {
+    "badge": "PRIZES",
+    "title": "Attractive Prizes",
+    "description": "Winners of Suceavathon will be rewarded with valuable prizes and incredible opportunities!",
+    "cards": [
+      {
+        "badge": "1st Place",
+        "title": "Grand Prize",
+        "description": "TBD",
+        "details": "Prize details will be announced soon"
+      },
+      {
+        "badge": "2nd Place",
+        "title": "Prize 2",
+        "description": "TBD",
+        "details": "Prize details will be announced soon"
+      },
+      {
+        "badge": "3rd Place",
+        "title": "Prize 3",
+        "description": "TBD",
+        "details": "Prize details will be announced soon"
+      }
+    ],
+    "specialPrizes": {
+      "title": "Special Prizes",
+      "description": "In addition to the main prizes, we also offer special prizes (TBD) for:"
+    }
+  },
+  "sponsors": {
+    "badge": "SPONSORS",
+    "title": "Sponsors & Partners",
+    "description": "Suceavathon wouldn’t be possible without the support of our partners and sponsors. Thank you for your support!",
+    "platinum": {
+      "title": "PLATINUM SPONSORS"
+    },
+    "gold": {
+      "title": "GOLD SPONSORS"
+    },
+    "silverBronze": {
+      "title": "SILVER & BRONZE SPONSORS"
+    },
+    "callToAction": "Interested in becoming a sponsor?",
+    "contactLink": "Contact us for details"
+  },
+  "contact": {
+    "badge": "CONTACT",
+    "title": "Get in Touch",
+    "description": "Have questions or want to learn more about Suceavathon? Send us a message and we’ll get back to you as soon as possible.",
+    "contactInfo": {
+      "title": "Contact Information",
+      "location": "Suceava, Romania",
+      "email": "hello@suceavahacks.org"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "github": "Github",
+      "mail": "Mail"
+    },
+    "form": {
+      "title": "Send us a message",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "How can we help you?"
+        }
+      },
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "branding": {
+      "title": "Suceavathon",
+      "description": "Suceavathon is a 12-hour coding event where participants come together to turn ideas into reality through code, creativity, and collaboration"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        "About",
+        "Schedule",
+        "FAQ",
+        "Prizes",
+        "Contact",
+        "Register"
+      ]
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to our newsletter to stay updated with the latest news about Suceava Hacks",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "All rights reserved."
+  }
+}

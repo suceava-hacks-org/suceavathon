@@ -25,7 +25,7 @@ const sponsors = [
 const faqItems = [
   {
     question: "Evenimentul are loc fizic?",
-    answer: "Da! Suceavathon este un eveniment cu prezență fizică, care se desfășoară într-o locație din Suceava."
+    answer: "Da! Hackovina este un eveniment cu prezență fizică, care se desfășoară într-o locație din Suceava."
   },
   {
     question: "Participarea este gratuită?",
@@ -37,7 +37,7 @@ const faqItems = [
   },
   {
     question: "Câte persoane pot fi într-o echipă?",
-    answer: "Echipele pot avea între 1 și 5 membri, dar recomandăm cu tărie formarea unei echipe prin team matching pentru o experiență mai colaborativă și distractivă!"
+    answer: "Echipele pot avea 3-4 membri – acesta e formatul recomandat și susținut de noi pentru o experiență echilibrată, colaborativă și fun! Dacă nu ai echipă, te putem ajuta prin team matching."
   },
   {
     question: "Vor exista premii?",
@@ -253,7 +253,7 @@ export default function Home(): React.ReactElement {
             </ul>
           </nav>
           <div className="absolute bottom-10 text-white/80 text-sm">
-            Suceavathon • 2025
+            Hackovina • 2025
           </div>
         </div>
       )}
@@ -303,13 +303,13 @@ export default function Home(): React.ReactElement {
           <div className="max-w-7xl mx-auto px-4">
             <div className={`flex flex-col items-center text-center transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
               <div className="bg-[#ec375010] text-[#ec3750] font-bold px-6 py-2 rounded-full mb-8 text-sm md:text-base">
-                HACKATON 12 ORE • 26 APRILIE, 2025
+                HACKATON 12 ORE • 26 Aprilie, 2025
               </div>
 
               <div className="relative mb-12 pt-8">
                 <img
                   src="svthon.svg"
-                  alt="Suceavathon Logo"
+                  alt="Hackovina Logo"
                   className="w-full max-w-[300px] sm:max-w-[500px] md:max-w-[700px]"
                 />
               </div>
@@ -362,10 +362,10 @@ export default function Home(): React.ReactElement {
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-16 text-center">
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">DESPRE</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce este Suceavathon?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce este Hackovina?</h2>
               <div className="max-w-3xl mx-auto">
                 <p className="text-lg text-gray-700 mb-6">
-                  Suceavathon este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colaborare. Fie că ești începător sau ai experiență în programare, vei găsi o comunitate primitoare, gata să te susțină să reușești.
+                  Hackovina este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colaborare. Fie că ești începător sau ai experiență în programare, vei găsi o comunitate primitoare, gata să te susțină să reușești.
                 </p>
                 <div className="bg-gradient-to-r from-[#ec3750] to-black text-white font-bold px-6 py-3 rounded-lg mb-8 transform rotate-[-1deg] shadow-md inline-block">
                   <span className="text-lg">✨ Creat special pentru începători și first-time hackers! ✨</span>
@@ -430,7 +430,7 @@ export default function Home(): React.ReactElement {
                 🍕 Pizza nelimitat
               </div>
               <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[-1deg] text-lg">
-                👕 Ia-ți tricoul Suceavathon
+                👕 Ia-ți tricoul Hackovina
               </div>
               <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[1deg] text-lg">
                 🎁 Premii uimitoare
@@ -532,7 +532,7 @@ export default function Home(): React.ReactElement {
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">FAQ</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Întrebări Frecvente</h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Ai întrebări despre Suceavathon? Iată răspunsurile la cele mai frecvente întrebări.
+                Ai întrebări despre Hackovina? Iată răspunsurile la cele mai frecvente întrebări.
               </p>
             </div>
 
@@ -574,7 +574,7 @@ export default function Home(): React.ReactElement {
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">PREMII</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Premii Atractive</h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Câștigătorii Suceavathon vor fi recompensați cu premii valoroase și oportunități incredibile!
+                Câștigătorii Hackovina vor fi recompensați cu premii valoroase și oportunități incredibile!
               </p>
             </div>
 
@@ -633,7 +633,7 @@ export default function Home(): React.ReactElement {
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">SPONSORI</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Sponsori & Parteneri</h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Suceavathon nu ar fi posibil fără sprijinul partenerilor și sponsorilor noștri. Mulțumim pentru susținere!
+                Hackovina nu ar fi posibil fără sprijinul partenerilor și sponsorilor noștri. Mulțumim pentru susținere!
               </p>
             </div>
 
@@ -701,7 +701,7 @@ export default function Home(): React.ReactElement {
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">CONTACT</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Contactează-ne</h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Ai întrebări sau vrei să afli mai multe despre Suceavathon? Trimite-ne un mesaj și te vom contacta cât mai curând posibil.
+                Ai întrebări sau vrei să afli mai multe despre Hackovina? Trimite-ne un mesaj și te vom contacta cât mai curând posibil.
               </p>
             </div>
 
@@ -781,10 +781,10 @@ export default function Home(): React.ReactElement {
                   alt="Hack Club Orpheus"
                   className="h-10 mr-3 brightness-0 invert"
                 />
-                <h3 className="text-2xl font-bold">Suceavathon</h3>
+                <h3 className="text-2xl font-bold">Hackovina</h3>
               </div>
               <p className="text-white/80 mb-6 text-lg">
-                Suceavathon este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colabor
+                Hackovina este un eveniment de coding de 12 ore în care participanții se reunesc pentru a transforma ideile în realitate prin cod, creativitate și colabor
               </p>
               <div className="flex gap-6">
                 <a href="#" className="text-white hover:text-yellow-300 transition-colors">
@@ -836,7 +836,7 @@ export default function Home(): React.ReactElement {
           </div>
 
           <div className="border-t border-white/20 mt-10 pt-6 text-center text-white/70">
-            <p>© {new Date().getFullYear()} Suceavathon. Toate drepturile rezervate.</p>
+            <p>© {new Date().getFullYear()} Hackovina. Toate drepturile rezervate.</p>
           </div>
         </div>
       </footer>
