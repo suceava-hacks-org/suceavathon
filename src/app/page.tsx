@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Calendar, MapPin, Clock, Trophy, Users, Code, Star, Loader2, Twitter, Github, Instagram, Mail } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
+
 const navItems = [
   { label: "Despre", href: "#about" },
   { label: "Program", href: "#schedule" },
@@ -13,14 +14,12 @@ const navItems = [
 ];
 
 const sponsors = [
-  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "platinum" },
-  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "gold" },
-  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "gold" },
-  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "silver" },
-  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "silver" },
-  { name: "Logo-ul tău poate fi aici!", logo: "/", tier: "bronze" },
-];
-
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' },
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' },
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' },
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' },
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' },
+]
 
 const faqItems = [
   {
@@ -40,8 +39,8 @@ const faqItems = [
     answer: "Echipele pot avea 3-4 membri – acesta e formatul recomandat și susținut de noi pentru o experiență echilibrată, colaborativă și fun! Dacă nu ai echipă, te putem ajuta prin team matching."
   },
   {
-    question: "Vor exista premii?",
-    answer: "Da! Cele mai bune proiecte vor fi premiate de către juriu. Avem și premii speciale și surprize pentru participanți."
+    "question": "Vor exista premii?",
+    "answer": "Da! Cele mai bune proiecte vor fi premiate de către juriu. În plus, vom avea și un premiu special acordat pe baza voturilor participanților, precum și premii surpriză. Toți participanții vor primi diplome de participare."
   },
   {
     question: "Pot participa dacă sunt începător în programare?",
@@ -587,7 +586,7 @@ export default function Home(): React.ReactElement {
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">PREMII</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Premii Atractive</h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Câștigătorii Hackovina vor fi recompensați cu premii valoroase și oportunități incredibile!
+                Câștigătorii Hackovina vor fi recompensați cu premii pe măsură! Iată ce am pregătit pentru voi:
               </p>
             </div>
 
@@ -652,27 +651,12 @@ export default function Home(): React.ReactElement {
 
             <div className="space-y-16">
               <div>
-                <h3 className="text-center font-bold text-xl mb-8 bg-gradient-to-r from-[#e5e5e5] to-[#b3b3b3] inline-block text-transparent bg-clip-text">
-                  SPONSORI PLATINUM
-                </h3>
-                <div className="flex justify-center gap-10">
-                  {sponsors
-                    .filter(sponsor => sponsor.tier === "platinum")
-                    .map((sponsor, index) => (
-                      <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center w-60 h-40 flex items-center justify-center border border-gray-100 hover:shadow-xl transition-all">
-                        <img src={sponsor.logo} alt={sponsor.name} className="max-h-20" />
-                      </div>
-                    ))
-                  }
-                </div>
-              </div>
-              <div>
-                <h3 className="text-center font-bold text-xl mb-8 bg-gradient-to-r from-[#f59e0b] to-[#d97706] inline-block text-transparent bg-clip-text">
-                  SPONSORI GOLD
+                <h3 className="text-center font-bold text-xl mb-8 bg-gradient-to-r from-[#3b82f6] to-[#1d4ed8] inline-block text-transparent bg-clip-text">
+                  SPONSORI
                 </h3>
                 <div className="flex flex-wrap justify-center gap-8">
                   {sponsors
-                    .filter(sponsor => sponsor.tier === "gold")
+                    .filter(sponsor => sponsor.type === "sponsor")
                     .map((sponsor, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center w-48 h-32 flex items-center justify-center border border-gray-100 hover:shadow-lg transition-all">
                         <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
@@ -683,15 +667,15 @@ export default function Home(): React.ReactElement {
               </div>
 
               <div>
-                <h3 className="text-center font-bold text-xl mb-8 bg-gradient-to-r from-[#9ca3af] to-[#6b7280] inline-block text-transparent bg-clip-text">
-                  SPONSORI SILVER & BRONZE
+                <h3 className="text-center font-bold text-xl mb-8 bg-gradient-to-r from-[#10b981] to-[#059669] inline-block text-transparent bg-clip-text">
+                  PARTENERI
                 </h3>
-                <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex flex-wrap justify-center gap-8">
                   {sponsors
-                    .filter(sponsor => sponsor.tier === "silver" || sponsor.tier === "bronze")
+                    .filter(sponsor => sponsor.type === "partner")
                     .map((sponsor, index) => (
-                      <div key={index} className="bg-white p-4 rounded-lg shadow-sm text-center w-36 h-24 flex items-center justify-center border border-gray-100 hover:shadow-md transition-all">
-                        <img src={sponsor.logo} alt={sponsor.name} className="max-h-12" />
+                      <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center w-48 h-32 flex items-center justify-center border border-gray-100 hover:shadow-lg transition-all">
+                        <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
                       </div>
                     ))
                   }
@@ -797,9 +781,9 @@ export default function Home(): React.ReactElement {
                 Hackovina este sponsorizat fiscal de The Hack Foundation (d.b.a. Hack Club), o organizație nonprofit 501(c)(3) (EIN: 81-2908499).
               </p>
               <p className="text-white/80 mb-6 text-lg">
-                  Toate donațiile sunt deductibile fiscal în măsura permisă de lege. 
-                  Transparența financiară este importantă pentru noi - poți vedea toate cheltuielile și veniturile noastre pe {""}
-                  <a href="https://hcb.hackclub.com/hackovina/" className="text-white underline hover:text-yellow-300 transition-colors"> pagina noastră unde găsești toate detaliile financiare</a>.
+                Toate donațiile sunt deductibile fiscal în măsura permisă de lege (only in USA).
+                Transparența financiară este importantă pentru noi - poți vedea toate cheltuielile și veniturile noastre pe {""}
+                <a href="https://hcb.hackclub.com/hackovina/" className="text-white underline hover:text-yellow-300 transition-colors"> pagina noastră unde găsești toate detaliile financiare</a>.
               </p>
               <div className="flex gap-6">
                 <a className="text-white hover:text-yellow-300 transition-colors" href="mailto:hello@hackovina.org">
@@ -813,9 +797,9 @@ export default function Home(): React.ReactElement {
                 </a>
               </div>
               <div className="mt-8">
-                <a 
-                  href="https://hcb.hackclub.com/donations/start/hackovina" 
-                  target="_blank" 
+                <a
+                  href="https://hcb.hackclub.com/donations/start/hackovina"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-[#ec3750] hover:bg-yellow-100 px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-all hover:shadow-lg"
                 >
