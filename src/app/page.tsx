@@ -339,7 +339,7 @@ export default function Home(): React.ReactElement {
           <div className="max-w-7xl mx-auto px-4">
             <div className={`flex flex-col items-center text-center transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
               <div className="bg-[#ec375010] text-[#ec3750] font-bold px-6 py-2 rounded-full mb-8 text-sm md:text-base">
-                HACKATHON 12 ORE • 26 Aprilie, 2025
+                HACKATHON • 12 ORE • 26 Aprilie, 2025
               </div>
 
               <div className="relative mb-12 pt-8">
