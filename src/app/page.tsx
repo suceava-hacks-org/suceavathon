@@ -356,7 +356,7 @@ export default function Home(): React.ReactElement {
                       <div className="text-4xl font-bold text-[#ec3750]">{timeLeft.hours}</div>
                       <div className="text-xs uppercase text-gray-600 font-medium">Ore</div>
                     </div>
-                    <div className="bg-[#ec375010] pMap goe-4 rounded-lg">
+                    <div className="bg-[#ec375010] p-4 rounded-lg">
                       <div className="text-4xl font-bold text-[#ec3750]">{timeLeft.minutes}</div>
                       <div className="text-xs uppercase text-gray-600 font-medium">Minute</div>
                     </div>
