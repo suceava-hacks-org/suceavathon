@@ -1,10 +1,13 @@
 "use client"
 
+import 'leaflet/dist/leaflet.css';
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Calendar, MapPin, Clock, Trophy, Users, Code, Star, Loader2, Twitter, Github, Instagram, Mail } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { FilloutPopupEmbed } from "@fillout/react";
 import "@fillout/react/style.css";
+import dynamic from "next/dynamic";
+import { useMemo } from "react";
 
 // TO DO: please for god's sake, get rid of this spaghetti code and make it modular
 
@@ -111,6 +114,13 @@ export default function Home(): React.ReactElement {
     minutes: 0,
     seconds: 0
   });
+
+  const Map = useMemo(() => dynamic(
+    () => import('@/components/Map'),
+    {
+      ssr: false
+    }
+  ), [])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -219,12 +229,12 @@ export default function Home(): React.ReactElement {
           }}
         >
           <div className="absolute top-0 left-4">
-              <img 
-                src="https://assets.hackclub.com/flag-orpheus-top.svg" 
-                alt="Hack Club Orpheus" 
-                className="h-10 sm:h-16" 
-              />
-          </div>  
+            <img
+              src="https://assets.hackclub.com/flag-orpheus-top.svg"
+              alt="Hack Club Orpheus"
+              className="h-10 sm:h-16"
+            />
+          </div>
 
           <button
             className="absolute top-4 right-4 text-white hover:text-yellow-300 transition-colors"
@@ -267,10 +277,10 @@ export default function Home(): React.ReactElement {
       <header className="fixed w-full bg-white/90 backdrop-blur-sm z-40 border-b border-[#ec375015] shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
           <div className="flex items-center gap-2">
-            <img 
-              src="https://assets.hackclub.com/flag-orpheus-top.svg" 
-              alt="Hack Club Orpheus" 
-              className="h-10 sm:h-16" 
+            <img
+              src="https://assets.hackclub.com/flag-orpheus-top.svg"
+              alt="Hack Club Orpheus"
+              className="h-10 sm:h-16"
               onClick={(e: React.MouseEvent) => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
@@ -302,7 +312,7 @@ export default function Home(): React.ReactElement {
                 </li>
               ))}
               <li>
-                <Button 
+                <Button
                   className="bg-[#ec3750] hover:bg-[#d42d44] text-white text-sm rounded-full px-6 py-2"
                   onClick={openRegistrationForm}
                 >
@@ -346,7 +356,7 @@ export default function Home(): React.ReactElement {
                       <div className="text-4xl font-bold text-[#ec3750]">{timeLeft.hours}</div>
                       <div className="text-xs uppercase text-gray-600 font-medium">Ore</div>
                     </div>
-                    <div className="bg-[#ec375010] p-4 rounded-lg">
+                    <div className="bg-[#ec375010] pMap goe-4 rounded-lg">
                       <div className="text-4xl font-bold text-[#ec3750]">{timeLeft.minutes}</div>
                       <div className="text-xs uppercase text-gray-600 font-medium">Minute</div>
                     </div>
@@ -359,7 +369,7 @@ export default function Home(): React.ReactElement {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 mb-12">
-                <Button 
+                <Button
                   className="bg-[#ec3750] hover:bg-[#d42d44] text-white rounded-full px-10 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
                   onClick={openRegistrationForm}
                 >
@@ -505,19 +515,23 @@ export default function Home(): React.ReactElement {
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg mb-6">
                   <div className="h-64 bg-gray-200 relative">
                     <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-                      <p className="text-gray-600">Map goes here</p>
+                      <Map
+                        style={{ height: "100%", width: "100%" }}
+                        position={[47.6489689, 26.2444683]}
+                        zoom={13}
+                      />
                     </div>
                   </div>
                   <div className="p-6">
                     <h4 className="font-bold text-xl mb-2">
-                      Hotel Bicom
+                      Pensiunea BI COM
                     </h4>
                     <p className="text-gray-600 mb-4">
-                      Strada Dimitrie Cantemir 5<br />
-                      Suceava 720198, Romania
+                      Strada Narciselor, 20 - 22<br />
+                      Suceava 720207, Romania
                     </p>
                     <a
-                      href="https://maps.app.goo.gl/vnSuAzGQXkKnLfzd9"
+                      href="https://maps.app.goo.gl/8GCzDV9WapGjq8xeA"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-[#ec3750] font-medium hover:underline"
