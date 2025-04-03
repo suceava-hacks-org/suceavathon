@@ -63,22 +63,17 @@ const faqItems = [
 const scheduleItems = [
   {
     time: "09:00",
-    event: "Înregistrare & Welcome Coffee",
+    event: "Se deschid ușile",
     details: "Sosire participanți, înregistrare și networking"
   },
   {
     time: "10:00",
-    event: "Deschidere Oficială",
+    event: "Ceremonia de deschidere",
     details: "Prezentarea regulilor și formarea echipelor"
   },
   {
-    time: "10:30",
-    event: "Start Hackathon",
-    details: "Începe cronometrul! Timp de 12 ore pentru a crea proiectul"
-  },
-  {
-    time: "11:30",
-    event: "Workshop pentru Începători",
+    time: "11:00",
+    event: "Workshop pentru începători",
     details: "Un atelier interactiv pentru cei care vor să învețe bazele"
   },
   {
@@ -89,33 +84,18 @@ const scheduleItems = [
   {
     time: "14:00",
     event: "CTF Challenge",
-    details: "Provocare de tip Capture The Flag pentru toți pasionații de securitate"
+    details: "Provocare de tip Capture The Flag pe echipe"
   },
   {
-    time: "18:00",
-    event: "Snack Break",
-    details: "Gustări și băuturi pentru a-ți reîncărca bateriile"
-  },
-  {
-    time: "21:30",
-    event: "Deadline pentru Înscriere Proiecte",
-    details: "Ultimele modificări și pregătirea prezentării"
+    time: '19:00',
+    event: "Cină",
+    details: "Pauză de masă și networking"
   },
   {
     time: "22:00",
-    event: "Prezentări Proiecte",
-    details: "Fiecare echipă își prezintă proiectul în fața juriului"
+    event: "Ceremonia de închidere",
+    details: "Anunțarea câștigătorilor și încheierea evenimentului"
   },
-  {
-    time: "23:00",
-    event: "Deliberare & Premiere",
-    details: "Anunțarea câștigătorilor și înmânarea premiilor"
-  },
-  {
-    time: "23:30",
-    event: "Închidere Oficială",
-    details: "Networking și discuții finale"
-  }
 ];
 
 
