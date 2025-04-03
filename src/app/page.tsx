@@ -510,15 +510,14 @@ export default function Home(): React.ReactElement {
                   </div>
                   <div className="p-6">
                     <h4 className="font-bold text-xl mb-2">
-                      Asta ar putea fi locația ta
+                      Hotel Bicom
                     </h4>
                     <p className="text-gray-600 mb-4">
-                      TBD<br />
-                      Asta ar putea fi adresa ta<br />
-                      Suceava, Romania
+                      Strada Dimitrie Cantemir 5<br />
+                      Suceava 720198, Romania
                     </p>
                     <a
-                      href="https://maps.app.goo.gl/"
+                      href="https://maps.app.goo.gl/vnSuAzGQXkKnLfzd9"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-[#ec3750] font-medium hover:underline"
@@ -534,10 +533,6 @@ export default function Home(): React.ReactElement {
                 </div>
 
                 <div className="bg-[#ec375010] p-6 rounded-xl">
-                  <h4 className="font-bold text-lg mb-2">Transport</h4>
-                  <p className="text-gray-700 mb-4">
-                    TBD
-                  </p>
                   <h4 className="font-bold text-lg mb-2">Îndrumare</h4>
                   <p className="text-gray-700">
                     Putem îndruma participanții de la gară sau alte puncte de sosire către locația evenimentului, dacă este nevoie.
