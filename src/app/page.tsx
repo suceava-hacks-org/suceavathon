@@ -396,7 +396,7 @@ export default function Home(): React.ReactElement {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce este Hackovina?</h2>
               <div className="max-w-3xl mx-auto">
                 <p className="text-lg text-gray-700 mb-6">
-                  Hackovina este un eveniment de coding de 12 ore în care participanții se adună pentru a transforma ideile în realitate prin cod, creativitate și colaborare. Fie că ești începător sau ai experiență în programare, vei găsi o comunitate primitoare, gata să te susțină să reușești.
+                  Hackovina este primul eveniment organizat de Suceava Hacks, clubul local Hack Club, și marchează începutul unei comunități dedicate tinerilor pasionați de tehnologie. Este un hackathon de 12 ore în care transformăm ideile în proiecte reale prin cod, creativitate și colaborare. Indiferent dacă ești începător sau ai experiență, vei găsi un spațiu prietenos, unde vei fi susținut și încurajat să crești alături de alți pasionați ca tine. Te așteptăm să ne alături în această aventură de învățare și explorare a tehnologiei!”
                 </p>
                 <div className="bg-gradient-to-r from-[#ec3750] to-black text-white font-bold px-6 py-3 rounded-lg mb-8 transform rotate-[-1deg] shadow-md inline-block">
                   <span className="text-lg">✨ Creat special pentru începători și first-time hackers! ✨</span>
@@ -739,13 +739,16 @@ export default function Home(): React.ReactElement {
                   <a href="https://www.instagram.com/hackovina/" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
                     <Instagram className="h-6 w-6" />
                   </a>
-                  <a href="https://github.com/hackovina" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                  <a href="https://github.com/suceavahacks" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
                     <Github className="h-6 w-6" />
                   </a>
                   <a className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors" href="mailto:hello@hackovina.org">
                     <Mail className="h-6 w-6" />
                   </a>
                 </div>
+                <p className="text-gray-500 text-sm mt-4">
+                  Pentru cel mai rapid răspuns, te rugăm să ne contactezi prin email.
+                </p>
               </div>
 
 
@@ -803,13 +806,13 @@ export default function Home(): React.ReactElement {
               <p className="text-white/80 mb-6 text-lg">
                 Toate donațiile sunt deductibile fiscal în măsura permisă de lege (only in USA).
                 Transparența financiară este importantă pentru noi - poți vedea toate cheltuielile și veniturile noastre pe {""}
-                <a href="https://hcb.hackclub.com/hackovina/" className="text-white underline hover:text-yellow-300 transition-colors"> pagina noastră unde găsești toate detaliile financiare</a>.
+                <a href="https://hcb.hackclub.com/svh/" className="text-white underline hover:text-yellow-300 transition-colors"> pagina noastră unde găsești toate detaliile financiare</a>.
               </p>
               <div className="flex gap-6">
-                <a className="text-white hover:text-yellow-300 transition-colors" href="mailto:hello@hackovina.org">
+                <a className="text-white hover:text-yellow-300 transition-colors" href="mailto:hello@suceavahacks.org">
                   <Mail className="h-6 w-6" />
                 </a>
-                <a href="https://github.com/hackovina" className="text-white hover:text-yellow-300 transition-colors">
+                <a href="https://github.com/suceavahacks" className="text-white hover:text-yellow-300 transition-colors">
                   <Github className="h-6 w-6" />
                 </a>
                 <a href="https://www.instagram.com/hackovina/" className="text-white hover:text-yellow-300 transition-colors">
@@ -818,7 +821,7 @@ export default function Home(): React.ReactElement {
               </div>
               <div className="mt-8">
                 <a
-                  href="https://hcb.hackclub.com/donations/start/hackovina"
+                  href="https://hcb.hackclub.com/donations/start/svh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-[#ec3750] hover:bg-yellow-100 px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-all hover:shadow-lg"
