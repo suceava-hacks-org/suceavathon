@@ -42,7 +42,7 @@ const faqItems = [
   },
   {
     question: "Evenimentul are loc fizic?",
-    answer: "Da! Hackovina este un eveniment cu prezență fizică, care se desfășoară într-o locație din Suceava."
+    answer: "Da! Hackovina este un eveniment cu prezență fizică, care se desfășoară la pensiunea BiCom din Suceava."
   },
   {
     question: "Participarea este gratuită?",
@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: "Câte persoane pot fi într-o echipă?",
-    answer: "Echipele pot avea 3-4 membri – acesta e formatul recomandat și susținut de noi pentru o experiență echilibrată, colaborativă și fun! Dacă nu ai echipă, te putem ajuta prin team matching."
+    answer: "Echipele pot avea 3 membri – acesta e formatul recomandat și susținut de noi pentru o experiență echilibrată, colaborativă și fun! Dacă nu ai echipă, te putem ajuta prin team matching."
   },
   {
     "question": "Vor exista premii?",
@@ -63,10 +63,6 @@ const faqItems = [
   {
     question: "Pot participa dacă sunt începător în programare?",
     answer: "Absolut! Evenimentul este gândit pentru toate nivelurile de experiență. Vom avea mentori și workshopuri pentru începători."
-  },
-  {
-    question: "Unde trebuie să vin și la ce oră?",
-    answer: "Veți primi toate detaliile pe email înainte de eveniment, inclusiv pe Slack, Discord, Whatsapp și alte canale de comunicare. Locația și ora exactă vor fi comunicate clar participanților."
   },
   {
     question: "Pot participa dacă nu sunt elev de liceu?",
@@ -88,7 +84,7 @@ const scheduleItems = [
   },
   {
     time: "11:00",
-    event: "Workshop pentru începători",
+    event: "Workshop pentru începători ",
     details: "Un atelier interactiv pentru cei care vor să învețe bazele"
   },
   {
@@ -100,6 +96,11 @@ const scheduleItems = [
     time: "14:00",
     event: "CTF Challenge",
     details: "Provocare de tip Capture The Flag pe echipe"
+  },
+  {
+    time: "17:00",
+    event: "Workshop",
+    details: "Un atelier interactiv pentru toți participanții"
   },
   {
     time: '19:00',
@@ -442,7 +443,7 @@ export default function Home(): React.ReactElement {
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#ec3750] flex flex-col items-center text-center hover:shadow-lg transition-all">
                 <Users className="h-12 w-12 text-[#ec3750] mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-black">Newbie-friendly</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">Begginer friendly</h3>
                 <p className="text-gray-700">
                   N-ai mai scris cod niciodată? Nicio problemă! Vom avea mentori la fața locului care te vor ajuta să începi, plus workshopuri special gândite pentru începători.
                 </p>
@@ -612,64 +613,6 @@ export default function Home(): React.ReactElement {
           </div>
         </section>
 
-        <section id="prizes" className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">PREMII</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Premii Atractive</h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Câștigătorii Hackovina vor fi recompensați cu premii pe măsură! Iată ce am pregătit pentru voi:
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-              <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-400 relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-yellow-400 text-white font-bold px-4 py-1 rounded-bl-lg">
-                  Locul 1
-                </div>
-                <Trophy className="h-16 w-16 text-yellow-400 mb-6 mx-auto" />
-                <h3 className="text-2xl font-bold mb-4 text-center">Marele Premiu</h3>
-                <p className="text-lg font-bold text-center mb-6">TBD</p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="text-center italic text-sm text-gray-500">Detaliile premiului vor fi anunțate în curând</li>
-                </ul>
-
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-400 relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-gray-400 text-white font-bold px-4 py-1 rounded-bl-lg">
-                  Locul 2
-                </div>
-                <Trophy className="h-16 w-16 text-gray-400 mb-6 mx-auto" />
-                <h3 className="text-2xl font-bold mb-4 text-center">Premiul 2</h3>
-                <p className="text-lg font-bold text-center mb-6">TBD</p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="text-center italic text-sm text-gray-500">Detaliile premiului vor fi anunțate în curând</li>
-                </ul>
-
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#cd7f32] relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-[#cd7f32] text-white font-bold px-4 py-1 rounded-bl-lg">
-                  Locul 3
-                </div>
-                <Trophy className="h-16 w-16 text-[#cd7f32] mb-6 mx-auto" />
-                <h3 className="text-2xl font-bold mb-4 text-center">Premiul 3</h3>
-                <p className="text-lg font-bold text-center mb-6">TBD</p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="text-center italic text-sm text-gray-500">Detaliile premiului vor fi anunțate în curând</li>
-                </ul>
-
-              </div>
-            </div>
-
-            <div className="bg-[#ec375010] p-8 rounded-xl max-w-3xl mx-auto">
-              <h3 className="text-xl font-bold mb-4 text-center">Premii Speciale</h3>
-              <p className="text-center mb-6">Pe lângă premiile principale, oferim și premii speciale (TBD) pentru:</p>
-
-            </div>
-          </div>
-        </section>
 
         <section id="sponsors" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4">
