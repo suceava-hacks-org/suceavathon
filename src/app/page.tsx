@@ -29,6 +29,18 @@ const sponsors = [
 
 const faqItems = [
   {
+    question: "Ce este un hackathon?",
+    answer: "Un hackathon este un eveniment în care participanții colaborează pentru a dezvolta proiecte software sau hardware într-un timp limitat. Este o oportunitate de a învăța, de a colabora și de a crea ceva nou."
+  },
+  {
+    question: "Ce este Hackovina?",
+    answer: "Hackovina este un hackathon de 12 ore, dedicat tinerilor pasionați de tehnologie. Este organizat de clubul Suceava Hacks, parte din Hack Club, o comunitate globală de tineri pasionați de tehnologie."
+  },
+  {
+    question: "Ce este Suceava Hacks?",
+    answer: "Suceava Hacks este un club local Hack Club, dedicat tinerilor pasionați de tehnologie din Suceava. Ne propunem să creăm o comunitate activă și să organizăm evenimente care să inspire și să educe tinerii în domeniul tehnologiei."
+  },
+  {
     question: "Evenimentul are loc fizic?",
     answer: "Da! Hackovina este un eveniment cu prezență fizică, care se desfășoară într-o locație din Suceava."
   },
@@ -38,7 +50,7 @@ const faqItems = [
   },
   {
     question: "Pot participa dacă nu am o echipă?",
-    answer: "Desigur! Poți veni singur și vei putea forma o echipă la fața locului, în cadrul sesiunii de team matching."
+    answer: "Desigur! Echipele vor fi formate în ziua evenimentului. Dacă nu ai o echipă, nu-ți face griji! Te vom ajuta să găsești colegi de echipă."
   },
   {
     question: "Câte persoane pot fi într-o echipă?",
@@ -46,7 +58,7 @@ const faqItems = [
   },
   {
     "question": "Vor exista premii?",
-    "answer": "Da! Cele mai bune proiecte vor fi premiate de către juriu. În plus, vom avea și un premiu special acordat pe baza voturilor participanților, precum și premii surpriză. Toți participanții vor primi diplome de participare."
+    "answer": "Da! Cele mai bune proiecte vor fi premiate. Detaliile premiilor vor fi anunțate în curând."
   },
   {
     question: "Pot participa dacă sunt începător în programare?",
@@ -732,7 +744,7 @@ export default function Home(): React.ReactElement {
                   </p>
                   <p className="flex items-center gap-3 text-gray-600">
                     <Mail className="text-red-500" />
-                    <span>hello@hackovina.org</span>
+                    <span>contact@suceavahacks.org</span>
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -742,7 +754,7 @@ export default function Home(): React.ReactElement {
                   <a href="https://github.com/suceavahacks" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors" href="mailto:hello@hackovina.org">
+                  <a className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors" href="mailto:contact@suceavahacks.org">
                     <Mail className="h-6 w-6" />
                   </a>
                 </div>
