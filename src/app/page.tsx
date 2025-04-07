@@ -8,6 +8,7 @@ import { FilloutPopupEmbed } from "@fillout/react";
 import "@fillout/react/style.css";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
+import Link from 'next/link';
 
 // TO DO: please for god's sake, get rid of this spaghetti code and make it modular
 
@@ -20,11 +21,11 @@ const navItems = [
 ];
 
 const sponsors = [
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' },
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' },
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' },
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' },
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' },
+  { name: '.xyz', logo: '/xyz-logo-color.svg', type: 'sponsor', link: 'https://gen.xyz/' },
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor', link: '/'},
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' , link: '/'},
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' , link: '/'},
+  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' , link: '/'},
 ]
 
 const faqItems = [
@@ -614,7 +615,7 @@ export default function Home(): React.ReactElement {
         </section>
 
 
-        <section id="sponsors" className="py-24 bg-white">
+        <section id="sponsors" className="py-24 bg-white" >
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <span className="inline-block bg-[#ec3750] text-white px-4 py-1 rounded-md mb-3 text-sm font-medium">SPONSORI</span>
@@ -634,7 +635,9 @@ export default function Home(): React.ReactElement {
                     .filter(sponsor => sponsor.type === "sponsor")
                     .map((sponsor, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center w-48 h-32 flex items-center justify-center border border-gray-100 hover:shadow-lg transition-all">
-                        <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                        <Link href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                          <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                        </Link>
                       </div>
                     ))
                   }
