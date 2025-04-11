@@ -17,8 +17,8 @@ const navItems = [
   { label: "Despre", href: "#about" },
   { label: "Program", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
   { label: "Sponsori", href: "#sponsors" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const sponsors = [
@@ -77,7 +77,7 @@ const scheduleItems = [
   {
     time: "09:00",
     event: "Se deschid ușile",
-    details: "Sosire participanți, înregistrare și networking"
+    details: "Sosire participanți, înregiVZwkvis1q6FH1Godgstrare și networking"
   },
   {
     time: "10:00",
