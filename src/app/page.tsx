@@ -3,12 +3,13 @@
 import 'leaflet/dist/leaflet.css';
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Calendar, MapPin, Clock, Trophy, Users, Code, Star, Loader2, Twitter, Github, Instagram, Mail } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FilloutPopupEmbed } from "@fillout/react";
 import "@fillout/react/style.css";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
 
 // TO DO: please for god's sake, get rid of this spaghetti code and make it modular
 
@@ -16,16 +17,16 @@ const navItems = [
   { label: "Despre", href: "#about" },
   { label: "Program", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
-  { label: "Premii", href: "#prizes" },
   { label: "Contact", href: "#contact" },
+  { label: "Sponsori", href: "#sponsors" },
 ];
 
 const sponsors = [
   { name: '.xyz', logo: '/xyz-logo-color.svg', type: 'sponsor', link: 'https://gen.xyz/' },
   { name: 'TBD', logo: '/aqirys.png', type: 'sponsor', link: 'https://www.aqirys.com/'},
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' , link: '/'},
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' , link: '/'},
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' , link: '/'},
+  { name: 'TBD', logo: null, type: 'partner' , link: '/'},
+  { name: 'TBD', logo: null, type: 'sponsor' , link: '/'},
+  { name: 'TBD', logo: null, type: 'partner' , link: '/'},
 ]
 
 const faqItems = [
@@ -128,6 +129,14 @@ export default function Home(): React.ReactElement {
     minutes: 0,
     seconds: 0
   });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const Map = useMemo(() => dynamic(
     () => import('@/components/Map'),
@@ -210,6 +219,37 @@ export default function Home(): React.ReactElement {
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        formRef.current as HTMLFormElement,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+      );
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   if (isLoading) {
@@ -636,7 +676,11 @@ export default function Home(): React.ReactElement {
                     .map((sponsor, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center w-48 h-32 flex items-center justify-center border border-gray-100 hover:shadow-lg transition-all">
                         <Link href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                          <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                          {sponsor.logo ? (
+                            <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                          ) : (
+                            <span className="text-gray-400 font-medium">{sponsor.name}</span>
+                          )}
                         </Link>
                       </div>
                     ))
@@ -653,7 +697,11 @@ export default function Home(): React.ReactElement {
                     .filter(sponsor => sponsor.type === "partner")
                     .map((sponsor, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center w-48 h-32 flex items-center justify-center border border-gray-100 hover:shadow-lg transition-all">
-                        <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                        {sponsor.logo ? (
+                          <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                        ) : (
+                          <span className="text-gray-400 font-medium">{sponsor.name}</span>
+                        )}
                       </div>
                     ))
                   }
@@ -712,33 +760,62 @@ export default function Home(): React.ReactElement {
 
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-4"> Trimite-ne un mesaj</h3>
-                <form className="space-y-4">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium mb-1"> Nume</label>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ec3750] focus:border-transparent outline-none"
                       placeholder="Numele tău"
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1"> Email</label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ec3750] focus:border-transparent outline-none"
                       placeholder="your@email.com"
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1"> Mesaj</label>
                     <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ec3750] focus:border-transparent outline-none h-32"
                       placeholder="Cum te putem ajuta?"
+                      required
                     ></textarea>
                   </div>
-                  <Button className="bg-[#ec3750] hover:bg-[#d42d44] text-white w-full py-2 rounded-lg">
-                    Send Message
+                  <Button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-[#ec3750] hover:bg-[#d42d44] text-white w-full py-2 rounded-lg flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Se trimite...
+                      </>
+                    ) : (
+                      'Trimite mesajul'
+                    )}
                   </Button>
+                  {submitStatus === 'success' && (
+                    <p className="text-green-600 text-center">Mesajul a fost trimis cu succes!</p>
+                  )}
+                  {submitStatus === 'error' && (
+                    <p className="text-red-600 text-center">A apărut o eroare. Te rugăm să încerci din nou.</p>
+                  )}
                 </form>
               </div>
             </div>
