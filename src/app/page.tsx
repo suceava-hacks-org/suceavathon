@@ -22,7 +22,7 @@ const navItems = [
 
 const sponsors = [
   { name: '.xyz', logo: '/xyz-logo-color.svg', type: 'sponsor', link: 'https://gen.xyz/' },
-  { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor', link: '/'},
+  { name: 'TBD', logo: '/aqirys.png', type: 'sponsor', link: 'https://www.aqirys.com/'},
   { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' , link: '/'},
   { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'sponsor' , link: '/'},
   { name: 'TBD', logo: 'https://assets.hackclub.com/flag-standalone.svg', type: 'partner' , link: '/'},
