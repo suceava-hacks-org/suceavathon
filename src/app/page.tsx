@@ -77,7 +77,7 @@ const scheduleItems = [
   {
     time: "09:00",
     event: "Se deschid ușile",
-    details: "Sosire participanți, înregiVZwkvis1q6FH1Godgstrare și networking"
+    details: "Sosire participanți, înregistrare și networking"
   },
   {
     time: "10:00",
@@ -570,7 +570,7 @@ export default function Home(): React.ReactElement {
                   <div className="h-64 bg-gray-200 relative">
                     <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
                       <Map
-                        style={{ height: "100%", width: "100%" }}
+                        style={{ height: "100%", width: "100%", zIndex: 1 }}
                         position={[47.6489689, 26.2444683]}
                         zoom={13}
                       />
@@ -742,7 +742,7 @@ export default function Home(): React.ReactElement {
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/hackovina/" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                  <a href="https://www.instagram.com/suceavahacks/" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
                     <Instagram className="h-6 w-6" />
                   </a>
                   <a href="https://github.com/suceavahacks" className="bg-gray-100 p-3 rounded-full hover:bg-red-500 hover:text-white transition-colors">
@@ -850,7 +850,7 @@ export default function Home(): React.ReactElement {
                 <a href="https://github.com/suceavahacks" className="text-white hover:text-yellow-300 transition-colors">
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="https://www.instagram.com/hackovina/" className="text-white hover:text-yellow-300 transition-colors">
+                <a href="https://www.instagram.com/suceavahacks/" className="text-white hover:text-yellow-300 transition-colors">
                   <Instagram className="h-6 w-6" />
                 </a>
               </div>
