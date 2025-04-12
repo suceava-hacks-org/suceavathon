@@ -27,6 +27,7 @@ const sponsors = [
   { name: 'TBD', logo: '/github.svg', type: 'sponsor', link: 'https://education.github.com'},
   { name: 'TBD', logo: '/top.svg', type: 'sponsor', link: 'https://topconstructsv.ro/' },
   { name: 'TBD', logo: '/lumy.jpg', type: 'sponsor', link: 'https://www.lumytools.ro/ro/' },
+  { name: 'TBD', logo: null, type: 'partner', link: '' },
 ]
 
 const faqItems = [
