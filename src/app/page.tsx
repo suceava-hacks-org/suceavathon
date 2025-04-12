@@ -18,15 +18,15 @@ const navItems = [
   { label: "Program", href: "#schedule" },
   { label: "FAQ", href: "#faq" },
   { label: "Sponsori", href: "#sponsors" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#contact" }, 
 ];
 
 const sponsors = [
   { name: '.xyz', logo: '/xyz-logo-color.svg', type: 'sponsor', link: 'https://gen.xyz/' },
-  { name: 'TBD', logo: '/aqirys.png', type: 'sponsor', link: 'https://www.aqirys.com/'},
-  { name: 'TBD', logo: null, type: 'partner' , link: '/'},
-  { name: 'TBD', logo: null, type: 'sponsor' , link: '/'},
-  { name: 'TBD', logo: null, type: 'partner' , link: '/'},
+  { name: 'TBD', logo: '/aqirys.png', type: 'sponsor', link: 'https://www.aqirys.com/' },
+  { name: 'TBD', logo: '/github.svg', type: 'sponsor', link: 'https://education.github.com'},
+  { name: 'TBD', logo: '/top.svg', type: 'sponsor', link: 'https://topconstructsv.ro/' },
+  { name: 'TBD', logo: null, type: 'partner', link: '/' },
 ]
 
 const faqItems = [
@@ -102,7 +102,7 @@ const scheduleItems = [
   {
     time: "17:00",
     event: "Workshop",
-    details: "Un atelier interactiv pentru toți participanții"
+    details: "Un atelier interactiv pentru cei care vor să învețe mai multe"
   },
   {
     time: '19:00',
@@ -233,7 +233,7 @@ export default function Home(): React.ReactElement {
         formRef.current as HTMLFormElement,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
       );
-      
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
@@ -450,7 +450,7 @@ export default function Home(): React.ReactElement {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce este Hackovina?</h2>
               <div className="max-w-3xl mx-auto">
                 <p className="text-lg text-gray-700 mb-6">
-                  Hackovina este primul eveniment organizat de Suceava Hacks, clubul local Hack Club, și marchează începutul unei comunități dedicate tinerilor pasionați de tehnologie. Este un hackathon de 12 ore în care transformăm ideile în proiecte reale prin cod, creativitate și colaborare. Indiferent dacă ești începător sau ai experiență, vei găsi un spațiu prietenos, unde vei fi susținut și încurajat să crești alături de alți pasionați ca tine. Te așteptăm să ne alături în această aventură de învățare și explorare a tehnologiei!”
+                  Hackovina este primul eveniment organizat de Suceava Hacks, clubul local Hack Club, și marchează începutul unei comunități dedicate tinerilor pasionați de tehnologie. Este un hackathon de 12 ore în care transformăm ideile în proiecte reale prin cod, creativitate și colaborare. Indiferent dacă ești începător sau ai experiență, vei găsi un spațiu prietenos, unde vei fi susținut și încurajat să crești alături de alți pasionați ca tine. Te așteptăm să ne alături în această aventură de învățare și explorare a tehnologiei!
                 </p>
                 <div className="bg-gradient-to-r from-[#ec3750] to-black text-white font-bold px-6 py-3 rounded-lg mb-8 transform rotate-[-1deg] shadow-md inline-block">
                   <span className="text-lg">✨ Creat special pentru începători și first-time hackers! ✨</span>
@@ -508,19 +508,27 @@ export default function Home(): React.ReactElement {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[-1deg] text-lg">
-                💻 Programați împreună
+              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center font-medium rotate-[-1deg] text-lg text-[#ec3750]">
+                👨‍💻 Codăm în echipă
               </div>
-              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[1deg] text-lg">
-                🍿 Snacks
+              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center font-medium rotate-[1deg] text-lg text-[#f6921e]">
+                🧃 Snacks & energie cât vrei
               </div>
-              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[-1deg] text-lg">
-                👕 Ia-ți tricoul Hackovina
+              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center font-medium rotate-[-1deg] text-lg text-[#4a90e2]">
+                🎁 Swag & surprize faine
               </div>
-              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center text-[#ec3750] font-medium rotate-[1deg] text-lg">
-                🎁 Premii pe măsură
+              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center font-medium rotate-[1deg] text-lg text-[#7b61ff]">
+                🏆 Premii tech & goodies
+              </div>
+              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center font-medium rotate-[-1deg] text-lg text-[#00b894]">
+                🤝 Cunoști oameni ca tine
+              </div>
+              <div className="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100 flex items-center font-medium rotate-[1deg] text-lg text-[#ff6f91]">
+                🌙 12 ore de vibe & hacking
               </div>
             </div>
+
+
           </div>
         </section>
 
@@ -796,7 +804,7 @@ export default function Home(): React.ReactElement {
                       required
                     ></textarea>
                   </div>
-                  <Button 
+                  <Button
                     type="submit"
                     disabled={isSubmitting}
                     className="bg-[#ec3750] hover:bg-[#d42d44] text-white w-full py-2 rounded-lg flex items-center justify-center gap-2"
