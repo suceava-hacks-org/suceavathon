@@ -1,6 +1,6 @@
 # 🚀 Hackovina 2025
 
-![Hackovina Logo](hackovina.svg)
+![Hackovina Logo](/public/hackovina.svg)
 
 ## 📅 April 26, 2025 • 12 Hours • Suceava, Romania
 
