@@ -23,11 +23,12 @@ const navItems = [
 
 const sponsors = [
   { name: '.xyz', logo: '/xyz-logo-color.svg', type: 'sponsor', link: 'https://gen.xyz/' },
-  { name: 'TBD', logo: '/aqirys.png', type: 'sponsor', link: 'https://www.aqirys.com/' },
-  { name: 'TBD', logo: '/github.svg', type: 'sponsor', link: 'https://education.github.com'},
-  { name: 'TBD', logo: '/top.svg', type: 'sponsor', link: 'https://topconstructsv.ro/' },
-  { name: 'TBD', logo: '/lumy.jpg', type: 'sponsor', link: 'https://www.lumytools.ro/ro/' },
-  { name: 'TBD', logo: null, type: 'partner', link: '' },
+  { name: 'AQIRYS', logo: '/aqirys.png', type: 'sponsor', link: 'https://www.aqirys.com/' },
+  { name: 'GITHUB', logo: '/github.svg', type: 'sponsor', link: 'https://education.github.com'},
+  { name: 'Top Construct', logo: '/top.svg', type: 'sponsor', link: 'https://topconstructsv.ro/' },
+  { name: 'LumyTools', logo: '/lumy.jpg', type: 'sponsor', link: 'https://www.lumytools.ro/ro/' },
+  { name: 'USV', logo: '/usv.svg', type: 'partner', link: 'https://usv.ro/' },
+  { name: 'Fight for Freedom', logo: '/fff.avif', type: 'partner', link: 'https://www.fightforfreedom.ro/' },
 ]
 
 const faqItems = [
@@ -706,11 +707,13 @@ export default function Home(): React.ReactElement {
                     .filter(sponsor => sponsor.type === "partner")
                     .map((sponsor, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center w-48 h-32 flex items-center justify-center border border-gray-100 hover:shadow-lg transition-all">
-                        {sponsor.logo ? (
-                          <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
-                        ) : (
-                          <span className="text-gray-400 font-medium">{sponsor.name}</span>
-                        )}
+                        <Link href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                          {sponsor.logo ? (
+                            <img src={sponsor.logo} alt={sponsor.name} className="max-h-16" />
+                          ) : (
+                            <span className="text-gray-400 font-medium">{sponsor.name}</span>
+                          )}
+                        </Link>
                       </div>
                     ))
                   }
